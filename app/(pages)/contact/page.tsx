@@ -1,4 +1,4 @@
-import ContactForm from '@/app/components/contactForm'
+import ContactForm from '@/app/components/ContactForm'
 import React from 'react'
 
 function page() {
