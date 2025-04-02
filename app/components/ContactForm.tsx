@@ -17,9 +17,9 @@ function ContactForm() {
 
             {/* Right side - Form introduction */}
             <div className="w-full md:w-1/2">
-              <p className="text-base sm:text-lg text-gray-800">
-                We'd love to hear from you. Fill out the form below to get started.
-              </p>
+            <p className="text-base sm:text-lg text-gray-800">
+  We&apos;d love to hear from you. Fill out the form below to get started.
+</p>
             </div>
           </div>
 

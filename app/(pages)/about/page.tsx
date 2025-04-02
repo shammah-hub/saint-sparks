@@ -1,5 +1,7 @@
 import React from 'react'
-import ContactForm from '@/app/components/ContactForm'
+import ContactForm from '@/app/components/contactForm'
+import Image from "next/image";
+
 
 const services = [
   {
@@ -50,7 +52,7 @@ function Page() {
               className="flex-1 min-w-[250px] max-w-[300px] p-6 text-center bg-white rounded-xl hover:shadow-xl transition-shadow duration-300"
             >
               <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                <img 
+                <Image 
                   src={service.image} 
                   alt={service.title} 
                   className="w-8 h-8 object-contain"
@@ -84,7 +86,7 @@ function Page() {
 
           {/* Quote icon */}
           <div className="absolute top-4 right-4 text-6xl text-white/20 select-none z-0">
-            "
+    
           </div>
 
           {/* Content */}

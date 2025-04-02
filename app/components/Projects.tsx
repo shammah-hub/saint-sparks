@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from "next/image";
+
 
 function Projects() {
   return (
@@ -25,7 +27,7 @@ function Projects() {
             {/* Project 1 - Easypedia Global */}
             <div className="mb-10">
               <div className="bg-white rounded-lg overflow-hidden shadow-md mb-6">
-                <img src="/place.svg" alt="Easypedia Global" className="w-full h-auto" />
+                <Image src="/place.svg" width={600} height={400} alt="Easypedia Global" className="w-full h-auto" />
               </div>
               <h3 className="text-xl md:text-2xl font-medium text-[#104072] mb-3">Easypedia Global</h3>
               <p className="text-gray-600 mb-4 text-sm md:text-base">
@@ -47,7 +49,7 @@ function Projects() {
             {/* Project 2 - Revi AI */}
             <div className="mb-10">
               <div className="bg-white rounded-lg overflow-hidden shadow-md mb-6">
-                <img src="/image.svg" alt="Revi AI" className="w-full h-auto" />
+                <Image src="/image.svg" width={600} height={400} alt="Revi AI" className="w-full h-auto" />
               </div>
               <h3 className="text-xl md:text-2xl font-medium text-[#104072] mb-3">Revi AI</h3>
               <p className="text-gray-600 mb-4 text-sm md:text-base">
@@ -69,7 +71,7 @@ function Projects() {
             {/* Project 3 - Gear Up */}
             <div className="mb-10">
               <div className="bg-white rounded-lg overflow-hidden shadow-md mb-6">
-                <img src="/place1.svg" alt="Gear Up" className="w-full h-auto" />
+                <Image src="/place1.svg" width={600} height={400} alt="Gear Up" className="w-full h-auto" />
               </div>
               <h3 className="text-xl md:text-2xl font-medium text-[#104072] mb-3">Gear Up</h3>
               <p className="text-gray-600 mb-4 text-sm md:text-base">
@@ -91,7 +93,7 @@ function Projects() {
             {/* Project 4 - Talim */}
             <div className="mb-10">
               <div className="bg-white rounded-lg overflow-hidden shadow-md mb-6">
-                <img src="/place2.svg" alt="Talim" className="w-full h-auto" />
+                <Image src="/place2.svg" width={600} height={400} alt="Talim" className="w-full h-auto" />
               </div>
               <h3 className="text-xl md:text-2xl font-medium text-[#104072] mb-3">Talim</h3>
               <p className="text-gray-600 mb-4 text-sm md:text-base">

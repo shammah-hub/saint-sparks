@@ -1,6 +1,10 @@
 import React from 'react';
 import { LuMail, LuPhone } from 'react-icons/lu';
 import { FaXTwitter } from 'react-icons/fa6';
+import Image from "next/image";
+import { BsInstagram } from "react-icons/bs";
+import { ImFacebook2 } from "react-icons/im";
+import { FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -9,9 +13,11 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
           {/* Logo and description */}
           <div className="space-y-4 flex flex-col items-center md:items-start">
-            <img src="/logo.png" className="w-[70px] h-[70px]" alt="Logo" />
+            <Image src="/logo.png" width={200} height={200} className="w-[70px] h-[70px]" alt="Logo" />
             <p className="text-gray-300 max-w-xs md:max-w-sm">
-              Lorem ipsum dolor sit amet consectetur. Fermentum suspendisse non amet magna fermentum. Gravida est amet erat natoque quis vitae. Nisl ac condimentum mattis et.
+            Saint Sparks Innovations is a digital agency specializing in branding,
+             web & software development, UI/UX design, backend solutions, cybersecurity, and digital marketing.
+             We craft innovative, secure, and scalable solutions to elevate brands and drive business growth. 
             </p>
           </div>
 
@@ -40,11 +46,18 @@ function Footer() {
             
             {/* Social media icons */}
             <div className="flex space-x-4 pt-2">
-              {['#instagram', '#twitter', '#facebook', '#linkedin'].map((link, index) => (
-                <a key={index} href={link} aria-label={link} className="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-blue-900 transition-colors">
-                  {index === 1 ? <FaXTwitter /> : <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/></svg>}
-                </a>
-              ))}
+              <a href="#instagram" aria-label="Instagram" className="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-blue-900 transition-colors">
+                <BsInstagram className="w-5 h-5" />
+              </a>
+              <a href="#twitter" aria-label="Twitter" className="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-blue-900 transition-colors">
+                <FaXTwitter className="w-5 h-5" />
+              </a>
+              <a href="#facebook" aria-label="Facebook" className="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-blue-900 transition-colors">
+                <ImFacebook2 className="w-5 h-5" />
+              </a>
+              <a href="#linkedin" aria-label="LinkedIn" className="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-blue-900 transition-colors">
+                <FaLinkedin className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>

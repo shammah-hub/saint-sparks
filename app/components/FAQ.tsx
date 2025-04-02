@@ -1,8 +1,14 @@
-
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
 
-const faqs = [
+// Define interfaces for our data structures
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+// Sample FAQ data
+const faqs: FAQItem[] = [
   {
     question: 'What services do Saint Sparks Innovations provide?',
     answer: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.'
@@ -19,18 +25,18 @@ const faqs = [
     question: 'Lorem ipsum dolor sit amet consectetur?',
     answer: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.'
   }
-]
+];
 
-function FAQSection() {
-  const [openIndex, setOpenIndex] = useState(null)
+const FAQSection: React.FC = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleFAQ = (index: any) => {
-    setOpenIndex(openIndex === index ? null : index)
-  }
+  const toggleFAQ = (index: number): void => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      {faqs.map((faq, index) => (
+      {faqs.map((faq: FAQItem, index: number) => (
         <div 
           key={index} 
           className="border-b border-gray-200 py-4"
@@ -54,7 +60,7 @@ function FAQSection() {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default FAQSection
+export default FAQSection;

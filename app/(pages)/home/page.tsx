@@ -1,42 +1,11 @@
 "use client";
 import FAQ from "@/app/components/FAQ";
 import Projects from "@/app/components/Projects";
-import React, { useState } from "react";
+import Image from "next/image";
+
 
 function Page() {
-  const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleFAQ = (index: any) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  const faqs = [
-    {
-      question: "What services do Saint Sparks Innovations provide?",
-      answer:
-        "Saint Sparks Innovations provides a range of innovative technology solutions including software development, digital transformation consulting, cloud migration services, and custom application development tailored to meet the specific needs of businesses across various industries.",
-    },
-    {
-      question: "Lorem ipsum dolor sit amet consectetur?",
-      answer:
-        "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      question: "Lorem ipsum dolor sit amet consectetur?",
-      answer:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    },
-    {
-      question: "Lorem ipsum dolor sit amet consectetur?",
-      answer:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-    },
-    {
-      question: "Lorem ipsum dolor sit amet consectetur?",
-      answer:
-        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
-    },
-  ];
 
   return (
     <>
@@ -47,7 +16,7 @@ function Page() {
       Building Innovative & Scalable Tech Solutions that Drive Growth
     </h1>
     <p className="text-lg sm:text-xl md:text-2xl mt-4">
-      Saint's Sparks is a kingdom-driven innovation hub dedicated to excellence, creativity, and transformation across multiple industries.
+      Saint Sparks is a kingdom-driven innovation hub dedicated to excellence, creativity, and transformation across multiple industries.
     </p>
     <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center md:justify-start">
       <button className="py-4 px-6 rounded-3xl bg-blue-500 text-white font-semibold shadow-lg hover:bg-blue-600 transition-all duration-300">
@@ -61,7 +30,13 @@ function Page() {
 
   {/* Right Image (Hidden on Small Screens) */}
   <div className="hidden md:block md:w-1/2 max-w-lg">
-    <img src="/man.svg" alt="Man" className="w-full h-auto" />
+  <Image 
+  src="/man.svg" 
+  width={500} 
+  height={300} 
+  alt="Man" 
+  className="w-full h-auto" 
+/>
   </div>
 </section>
 
@@ -102,7 +77,13 @@ function Page() {
                 className="shadow rounded-lg p-10 lg:p-20 text-center lg:text-left"
               >
                 <div className="bg-[#104072] text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 mx-auto lg:mx-0">
-                  <img src="/bezier.svg" alt="" />
+                  <Image 
+                    src="/bezier.svg" 
+                    width={100}  // Replace with actual width
+                    height={100} // Replace with actual height
+                    alt=""
+                    className="w-[20px] h-[20px]" 
+                  />
                 </div>
                 <h3 className="text-xl lg:text-2xl font-medium text-gray-800">
                   {service}
@@ -145,9 +126,11 @@ function Page() {
             {/* Testimonial Image */}
             <div className="w-full md:w-1/2 lg:w-5/12">
               <div className="rounded-lg overflow-hidden">
-                <img
+                <Image
                   src="/frame.svg"
                   alt="Testimonial"
+                  width={200}
+                  height={200}
                   className="w-full h-auto object-cover rounded-lg"
                 />
               </div>
@@ -171,14 +154,14 @@ function Page() {
               {/* Testimonial Quote */}
               <div className="mb-8">
                 <p className="text-gray-700 mb-6 text-center md:text-left">
-                  "Lorem ipsum dolor sit amet consectetur. Fermentum suspendisse
+                  Lorem ipsum dolor sit amet consectetur. Fermentum suspendisse
                   non amet magna fermentum. Gravida est amet erat natoque quis
                   vitae. Nisl ac condimentum mattis et. Mauris sit consectetur
                   et et magna vestibulum diam quisque mollis.
                 </p>
                 <p className="text-gray-700 text-center md:text-left">
                   Gravida est amet erat natoque quis vitae. Mauris sit
-                  consectetur et et magna vestibulum diam quisque mollis."
+                  consectetur et et magna vestibulum diam quisque mollis.
                 </p>
               </div>
 
@@ -193,9 +176,11 @@ function Page() {
 
                 {/* Company Logo */}
                 <div>
-                  <img
-                    src="/api/placeholder/120/40"
+                  <Image
+                    src="/webflow.png"
                     alt="Webflow"
+                    width={200}
+                    height={200}
                     className="h-8"
                   />
                 </div>
@@ -216,7 +201,6 @@ function Page() {
             looking for, kindly contact us.
           </p>
         </div>
-
         <FAQ />
       </section>
     </>

@@ -1,5 +1,6 @@
-import ContactForm from '@/app/components/ContactForm'
+import ContactForm from '@/app/components/contactForm'
 import React from 'react'
+import Image from 'next/image'
 
 function page() {
   return (
@@ -29,7 +30,7 @@ function page() {
             {/* Product Design */}
             <div className="shadow rounded-lg p-6 md:p-10">
               <div className="bg-[#104072] text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <img src="/bezier.svg" alt="" />
+                <Image src="/bezier.svg" alt="" />
               </div>
               <h3 className="text-xl md:text-2xl font-medium text-gray-800 flex items-center">
                 Product Design
@@ -42,7 +43,7 @@ function page() {
             {/* Software Development */}
             <div className="shadow rounded-lg p-6 md:p-10">
               <div className="bg-[#104072] text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <img src="/bezier.svg" alt="" />
+                <Image src="/bezier.svg" alt="" />
               </div>
               <h3 className="text-xl md:text-2xl font-medium text-gray-800 flex items-center">
                 Software Development
@@ -55,7 +56,7 @@ function page() {
             {/* Mobile App Development */}
             <div className="shadow rounded-lg p-6 md:p-10">
               <div className="bg-[#104072] text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <img src="/bezier.svg" alt="" />
+                <Image src="/bezier.svg" alt="" />
               </div>
               <h3 className="text-xl md:text-2xl font-medium text-gray-800 flex items-center">
                 Mobile App Development
@@ -71,7 +72,7 @@ function page() {
             {/* Cybersecurity */}
             <div className="shadow rounded-lg p-6 md:p-10">
               <div className="bg-[#104072] text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <img src="/bezier.svg" alt="" />
+                <Image src="/bezier.svg" alt="" />
               </div>
               <h3 className="text-xl md:text-2xl font-medium text-gray-800 flex items-center">
                 Cybersecurity

@@ -5,7 +5,9 @@ import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import { usePathname } from "next/navigation";
 import { FaBars } from "react-icons/fa6";
-import { IoClose } from "react-icons/io5";
+import { IoClose } from "react-icons/io5"
+import Image from "next/image";
+;
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +26,13 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex justify-between items-center">
       {/* Logo */}
       <Link href="/" className="text-black text-2xl font-bold">
-        <img src="/logo.png" className="w-[50px] h-[50px]" alt="Logo" />
+       <Image 
+           src="/logo.png" 
+            width={100} 
+            height={100} 
+            className="w-[50px] h-[50px]" 
+             alt="Logo" 
+        />
       </Link>
 
       {/* Mobile Menu Button */}
