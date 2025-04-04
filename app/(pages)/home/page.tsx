@@ -156,8 +156,7 @@ function Page() {
                 Working with Saintsparks has been a blessing—professional, creative, and deeply aligned with purpose.
                 </p>
                 <p className="text-gray-700 text-center md:text-left">
-                They brought my vision to life beyond what I imagined. Their team genuinely listens, prays with you, and pours passion into every detail. It's more than a service; it's a divine partnership.
-
+                    They brought my vision to life beyond what I imagined. Their team genuinely listens, prays with you, and pours passion into every detail. It&apos;s more than a service; it&apos;s a divine partnership.
                 </p>
               </div>
 
@@ -327,7 +326,7 @@ function Page() {
             Frequently <br /> Asked Questions
           </h3>
           <p className="w-full lg:w-[588px] text-gray-600 text-center lg:text-left">
-            Check out our FAQs below, if you cannot find the answer you’re
+            Check out our FAQs below, if you cannot find the answer you are
             looking for, kindly contact us.
           </p>
         </div>
