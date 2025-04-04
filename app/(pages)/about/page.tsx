@@ -26,6 +26,27 @@ const services = [
 ]
 
 function Page() {
+
+  const values = [
+    {
+      title: "Identity",
+      description: "We embrace our divine identity as sons and daughters of God, living with purpose and passion to impact the world. We encourage individuals to discover and mature in their unique gifts, callings, and anointings."
+    },
+    {
+      title: "Creativity",
+      description: "We develop innovative solutions, ideas, expressions, and disruptive technologies that bring lasting change. Our goal is to transcend traditional models of mindsets, storytelling, and industry impact."
+    },
+    {
+      title: "Service",
+      description: "We integrate excellence and ministry in all that we do, serving as leaders in business, tech, food, finance, and beyond. We manifest hospitality, generosity, and servant leadership, ensuring restoration and hope in every industry."
+    },
+    {
+      title: "Nobility",
+      description: "We embody integrity, humility, and lifelong learning, seeing character growth as an act of worship. We build foundations of spiritual disciplines, honoring unity and faith in every industry."
+    }
+  ];
+
+
   return (
     <>
       <section className="w-full h-[60vh] bg-[url('/abt.svg')] bg-cover bg-center">
@@ -45,75 +66,89 @@ function Page() {
 
         {/* four divs */}
         <div className="flex flex-wrap justify-center md:justify-between gap-6">
-          {services.map((service, index) => (
-            <div 
-              key={index} 
-              className="flex-1 min-w-[250px] max-w-[300px] p-6 text-center bg-white rounded-xl hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                <Image 
-                  src={service.image} 
-                  alt={service.title} 
-                  className="w-8 h-8 object-contain"
-                />
-              </div>
+  {services.map((service, index) => (
+    <div 
+      key={index} 
+      className="flex-1 min-w-[250px] max-w-[300px] p-6 text-left bg-white rounded-xl shadow transition-shadow duration-300"
+    >
+      <div className="w-16 h-16 bg-[#104072] text-white  rounded-full flex items-center justify-center mb-4">
+        <Image 
+          src={service.image} 
+          width={200}
+          height={200}
+          alt={service.title} 
+          className="w-8 h-8 object-contain"
+        />
+      </div>
 
-              <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
-            </div>
-          ))}
-        </div>      
+      <h3 className="text-xl font-bold mb-4">{service.title}</h3>
+      <p className="text-gray-600">{service.description}</p>
+    </div>
+  ))}
+</div>
+
       </section>
 
       {/* Our Mission */}
-      <section className="relative w-full px-4 py-16 flex justify-center items-center"></section>
-        <div className="relative bg-[#003366] text-white rounded-lg p-6 md:p-10 max-w-5xl w-full overflow-hidden">
-          {/* Background design elements */}
-          <div className="absolute top-0 left-0 w-full h-full opacity-10">
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              viewBox="0 0 1440 320" 
-              className="absolute top-0 left-0 w-full"
-            >
-              <path 
-                fill="#ffffff" 
-                fillOpacity="0.1" 
-                d="M0,96L48,112C96,128,192,160,288,154.7C384,149,480,107,576,101.3C672,96,768,128,864,154.7C960,181,1056,203,1152,192C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320L192,320L96,320L0,320Z"
-              ></path>
-            </svg>
-          </div>
-
-          {/* Quote icon */}
-          <div className="absolute top-4 right-4 text-6xl text-white/20 select-none z-0">
+      <section className="relative min-h-[600px] sm:min-h-[600px] py-8 sm:py-16 px-4 max-w-6xl mx-auto">
+  
+  {/* Blue Container */}
+  <div className="flex flex-col justify-center items-center bg-[#104072] text-white h-auto sm:h-[350px] p-4 sm:p-8 pt-12 sm:pt-16 rounded-3xl sm:rounded-4xl rounded-tl-[80px] sm:rounded-tl-[161px] relative">
+    {/* Quotation Mark */}
+    <div className="flex justify-center absolute top-0 right-4 sm:right-30 bg-white text-[#104072] rounded-br-xl rounded-bl-xl w-16 sm:w-20 p-3 sm:p-4 text-3xl sm:text-4xl font-serif">
+     &ldquo;&rdquo;
+    </div>
+    <div className="absolute top-0 left-0 bg-white text-[#104072] font-bold rounded-br-3xl sm:rounded-br-4xl p-2 sm:p-4">
+     <h3 className="text-2xl sm:text-4xl">OUR MISSION</h3>
+    </div>
+    <div className="absolute top-14 sm:top-18 left-0 bg-[#104072] text-[#104072] rounded-tl-3xl sm:rounded-tl-4xl p-4 sm:text-4xl font-serif">
+     <h3>OUR </h3>
+    </div>
     
-          </div>
+    {/* Mission Text */}
+    <p className="text-base sm:text-lg max-w-3xl mb-8 mt-16 sm:mt-0 px-4 sm:px-0">
+      To represent the culture of heaven in every industry we touch, ensuring that our 
+      solutions are built with integrity, wisdom, and kingdom impact. We raise leaders, 
+      entrepreneurs, and innovators who will carry the presence of God into work, 
+      business, and ministry, creating lasting transformation.
+    </p>
+   
+  </div>
+  {/* button prev and next */}
+  <div className="flex my-8 sm:my-12 justify-center sm:justify-end gap-4">
+      <button className="bg-transparent border border-[#104072] rounded-full p-2 hover:bg-white hover:text-blue-900 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 sm:h-6 w-5 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button className="bg-transparent border border-[#104072] rounded-full p-2 hover:bg-white hover:text-blue-900 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 sm:h-6 w-5 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+</section>
 
-          {/* Content */}
-          <div className="relative z-10">
-            <h2 className="text-2xl md:text-4xl bg-white inline-block rounded-2xl font-bold mb-6">
-              Our Mission
-            </h2>
-            <p className="text-lg md:text-xl leading-relaxed max-w-4xl">
-              To represent the culture of heaven in every industry we touch, ensuring that our 
-              solutions are built with integrity, wisdom, and kingdom impact. We raise leaders, 
-              entrepreneurs, and innovators who will carry the presence of God into work, 
-              business, and ministry, creating lasting transformation.
-            </p>
-          </div>
 
-          {/* Navigation arrows */}
-          <div className="absolute bottom-4 right-4 flex space-x-2">
-            <button className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition">
-              ←
-            </button>
-            <button className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition">
-              →
-            </button>
-          </div>
+        {/* core values */}
+        <section className="p-24 bg-[#104072] min-h-[500px] text-white py-16">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold mb-12">Core Values</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {values.map((value, index) => (
+            <div key={index} className="bg-white text-gray-800 rounded-lg p-6 shadow-lg h-full">
+              <h3 className="text-xl font-bold mb-3 text-[#104072]">{value.title}</h3>
+              <p className="text-sm">{value.description}</p>
+            </div>
+          ))}
         </div>
+      </div>
+    </section>
+
 
       {/* Contact Form Section */}
-      <section className="py-8 px-4 sm:py-12 sm:px-6 md:px-8 lg:px-20 bg-white border border-gray-200 rounded-lg mx-auto my-8 sm:my-12 max-w-7xl">
+      <section className=" py-8 px-4 sm:py-12 sm:px-6 md:px-8 lg:px-20 bg-white border border-gray-200 rounded-lg mx-auto my-8 sm:my-12 max-w-7xl">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between mb-8 sm:mb-12 md:space-x-12">
             {/* Left side - Heading */}
@@ -127,10 +162,12 @@ function Page() {
             {/* Right side - Form introduction */}
             <div className="w-full md:w-1/2">
             <p className="text-base sm:text-lg text-gray-800">
-  We&apos;d love to hear from you. Fill out the form below to get started.
-</p>
+               We&apos;d love to hear from you. Fill out the form below to get started.
+            </p>
             </div>
           </div>
+
+          
 
           {/* Contact Form */}
           <form className="w-full">

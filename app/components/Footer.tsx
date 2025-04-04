@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { LuMail, LuPhone } from 'react-icons/lu';
 import { FaXTwitter } from 'react-icons/fa6';
 import Image from "next/image";
@@ -23,11 +24,19 @@ function Footer() {
 
           {/* Navigation links */}
           <div className="flex flex-col items-center space-y-4">
-            <a href="#about" className="hover:text-gray-300 transition-colors text-lg">About</a>
-            <a href="#services" className="hover:text-gray-300 transition-colors text-lg">Services</a>
-            <a href="#blog" className="hover:text-gray-300 transition-colors text-lg">Blog</a>
-            <a href="#contact" className="hover:text-gray-300 transition-colors text-lg">Contact</a>
-          </div>
+  <Link href="/about">
+    <span className="hover:text-gray-300 transition-colors text-lg cursor-pointer">About</span>
+  </Link>
+  <Link href="/services">
+    <span className="hover:text-gray-300 transition-colors text-lg cursor-pointer">Services</span>
+  </Link>
+  <Link href="/portfolio">
+    <span className="hover:text-gray-300 transition-colors text-lg cursor-pointer">Portfolio</span>
+  </Link>
+  <Link href="/contact">
+    <span className="hover:text-gray-300 transition-colors text-lg cursor-pointer">Contact</span>
+  </Link>
+</div>
 
           {/* Contact information */}
           <div className="space-y-6 flex flex-col items-center md:items-start">

@@ -9,9 +9,8 @@ function Page() {
 
   return (
     <>
-      <section className="flex flex-col md:flex-row p-8 sm:p-12 md:p-16 lg:p-24 text-white bg-[#104071] bg-[url('/grid.svg')] bg-cover bg-center h-auto justify-center items-center gap-10">
-  {/* Left Content */}
-  <div className="w-full max-w-2xl text-center md:text-left">
+<section className="flex flex-col md:flex-row p-4 sm:p-12 sm:py-24 md:p-16 lg:p-24 xl:pt-74 xl:pb-36 text-white bg-[#104071] bg-[url('/grid.svg')] bg-cover bg-center h-[800px] justify-center items-center gap-10"> 
+ <div className="w-full max-w-2xl text-center md:text-left">
     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[55px] font-bold leading-snug">
       Building Innovative & Scalable Tech Solutions that Drive Growth
     </h1>
@@ -31,11 +30,11 @@ function Page() {
   {/* Right Image (Hidden on Small Screens) */}
   <div className="hidden md:block md:w-1/2 max-w-lg">
   <Image 
-  src="/man.svg" 
-  width={500} 
-  height={300} 
-  alt="Man" 
-  className="w-full h-auto" 
+     src="/man.svg" 
+     width={500} 
+      height={300} 
+      alt="Man" 
+      className="w-full h-auto" 
 />
   </div>
 </section>
@@ -65,36 +64,36 @@ function Page() {
 
           {/* Services grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 mt-10">
-            {/* Service Cards */}
-            {[
-              "Product Design",
-              "Software Development",
-              "Mobile App Development",
-              "Cybersecurity",
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="shadow rounded-lg p-10 lg:p-20 text-center lg:text-left"
-              >
-                <div className="bg-[#104072] text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 mx-auto lg:mx-0">
-                  <Image 
-                    src="/bezier.svg" 
-                    width={100}  // Replace with actual width
-                    height={100} // Replace with actual height
-                    alt=""
-                    className="w-[20px] h-[20px]" 
-                  />
-                </div>
-                <h3 className="text-xl lg:text-2xl font-medium text-gray-800">
-                  {service}
-                </h3>
-                <p className="mt-4 text-gray-600">
-                  We build intuitive, user-friendly web and mobile applications
-                  or software tailored to your business needs.
-                </p>
-              </div>
-            ))}
-          </div>
+  {/* Service Cards */}
+  {[
+    { name: "Product Design", description: "We craft intuitive, user-centered product designs that blend aesthetics with functionality—turning ideas into experiences that truly connect." },
+    { name: "Software Development", description: "Our software development services focus on building robust, scalable, and high-performance applications tailored to meet your business needs." },
+    { name: "Mobile App Development", description: "We design and develop mobile applications that offer seamless user experiences and exceptional performance across all platforms." },
+    { name: "Cybersecurity", description: "Our cybersecurity solutions protect your digital assets, ensuring your systems and data remain safe from evolving threats." }
+  ].map((service, index) => (
+    <div
+      key={index}
+      className="shadow rounded-lg p-10 lg:p-20 text-center lg:text-left"
+    >
+      <div className="bg-[#104072] text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 mx-auto lg:mx-0">
+        <Image 
+          src="/bezier.svg" 
+          width={100}  // Replace with actual width
+          height={100} // Replace with actual height
+          alt=""
+          className="w-[20px] h-[20px]" 
+        />
+      </div>
+      <h3 className="text-xl lg:text-2xl font-medium text-gray-800">
+        {service.name}
+      </h3>
+      <p className="mt-4 text-gray-600">
+        {service.description}
+      </p>
+    </div>
+  ))}
+</div>
+
         </div>
       </section>
 
@@ -154,14 +153,11 @@ function Page() {
               {/* Testimonial Quote */}
               <div className="mb-8">
                 <p className="text-gray-700 mb-6 text-center md:text-left">
-                  Lorem ipsum dolor sit amet consectetur. Fermentum suspendisse
-                  non amet magna fermentum. Gravida est amet erat natoque quis
-                  vitae. Nisl ac condimentum mattis et. Mauris sit consectetur
-                  et et magna vestibulum diam quisque mollis.
+                Working with Saintsparks has been a blessing—professional, creative, and deeply aligned with purpose.
                 </p>
                 <p className="text-gray-700 text-center md:text-left">
-                  Gravida est amet erat natoque quis vitae. Mauris sit
-                  consectetur et et magna vestibulum diam quisque mollis.
+                They brought my vision to life beyond what I imagined. Their team genuinely listens, prays with you, and pours passion into every detail. It's more than a service; it's a divine partnership.
+
                 </p>
               </div>
 
@@ -207,8 +203,8 @@ function Page() {
             {/* Right side - Form introduction */}
             <div className="w-full md:w-1/2">
             <p className="text-base sm:text-lg text-gray-800">
-  We&apos;d love to hear from you. Fill out the form below to get started.
-</p>
+              We&apos;d love to hear from you. Fill out the form below to get started.
+            </p>
             </div>
           </div>
 
