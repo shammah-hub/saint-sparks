@@ -102,7 +102,7 @@ function Page() {
      <h3 className="text-2xl sm:text-4xl">OUR MISSION</h3>
     </div>
     <div className="absolute top-14 sm:top-18 left-0 bg-[#104072] text-[#104072] rounded-tl-3xl sm:rounded-tl-4xl p-4 sm:text-4xl font-serif">
-     <h3>OUR </h3>
+     <h3>OU </h3>
     </div>
     
     {/* Mission Text */}
