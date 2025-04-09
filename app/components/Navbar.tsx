@@ -26,10 +26,10 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="text-black text-2xl font-bold">
           <Image 
-            src="/logo.png" 
+            src="/logo-black.png" 
             width={100} 
             height={100} 
-            className="w-[50px] h-[50px]" 
+            className="w-[120px] h-[100px]" 
             alt="Logo" 
           />
         </Link>
